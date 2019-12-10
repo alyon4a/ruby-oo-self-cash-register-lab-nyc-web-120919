@@ -7,7 +7,7 @@ class CashRegister
     @total = 0.0
     @discount = employee_discount
     @items = []
-    @last_transaction
+    @last_transaction = 0.0
   end
   
   def add_item (item_name, price, qty = 1)
@@ -21,6 +21,10 @@ class CashRegister
     discount = @discount * @total / 100
     @total -= discount
     "After the discount, the total comes to $#{@total.round}."
+  end
+  
+  def void_last_transaction
+    @total -= @last_transaction
   end
   
 end
