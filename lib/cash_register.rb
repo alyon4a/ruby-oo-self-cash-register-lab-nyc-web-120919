@@ -11,9 +11,7 @@ class CashRegister
   
   def add_item (item_name, price, qty = 1)
     @total += price * qty
-    puts "NEW ITEM" 
-    puts item_name
-    puts qty
+   
     qty.times {items << item_name}
   end
   
