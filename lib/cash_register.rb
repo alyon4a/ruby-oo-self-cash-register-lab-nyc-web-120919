@@ -14,7 +14,7 @@ class CashRegister
     puts "NEW ITEM" 
     puts item_name
     puts qty
-    items << item_name
+    qty.times items << item_name
   end
   
   def apply_discount 
