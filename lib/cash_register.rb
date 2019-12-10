@@ -7,6 +7,7 @@ class CashRegister
     @total = 0.0
     @discount = employee_discount
     @items = []
+    @last_transaction
   end
   
   def add_item (item_name, price, qty = 1)
