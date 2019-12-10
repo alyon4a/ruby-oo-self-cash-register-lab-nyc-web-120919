@@ -2,6 +2,7 @@ require 'pry'
 class CashRegister
   
   attr_accessor :discount, :total, :items
+  
   def initialize (employee_discount = 0)
     @total = 0.0
     @discount = employee_discount
@@ -10,6 +11,8 @@ class CashRegister
   
   def add_item (item_name, price, qty = 1)
     @total += price * qty
+    puts "NEW ITEM" 
+    puts item_name
     items << item_name
   end
   
