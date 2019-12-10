@@ -13,6 +13,7 @@ class CashRegister
     @total += price * qty
     puts "NEW ITEM" 
     puts item_name
+    puts qty
     items << item_name
   end
   
